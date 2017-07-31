@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<decorators defaultdir="/">
+    <!-- 默认装饰页面, 在需要装饰的页面增加<meta name="decorator" content="default"/> -->
+    <decorator name="blank" page="/WEB-INF/layout/blank.jsp" />
+    <decorator name="default" page="/WEB-INF/layout/default.jsp" />
+    <decorator name="default1" page="/WEB-INF/layout/default1.jsp" />
+</decorators>
