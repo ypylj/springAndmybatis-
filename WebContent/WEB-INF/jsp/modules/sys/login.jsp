@@ -8,7 +8,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta content="default" name="decorator">
 	<title>登录页面</title>
-	<link rel="stylesheet" href="${ctxStatic}/login/style/css/reset.css"/>
+	<%-- <link rel="stylesheet" href="${ctxStatic}/login/style/css/reset.css"/>
 	<link rel="stylesheet" href="${ctxStatic}/login/style/css/global.css"/>
 	<link rel="stylesheet" href="${ctxStatic}/login/style/css/component.css"/>
 	<link rel="stylesheet" href="${ctxStatic}/login/style/css/login.css"/>
@@ -23,7 +23,7 @@
     <script src="${ctxStatic}/login/style/js/global.js"></script>
 	<script src="${ctxStatic}/login/style/js/components.js"></script>
 	<script src="${ctxStatic}/login/style/js/md5.js"></script>
- 	<script src="${ctxStatic}/login/style/js/login.js"></script>
+ 	<script src="${ctxStatic}/login/style/js/login.js"></script> --%>
  	<script>
 	
   	$(document).ready(function(){
@@ -68,22 +68,22 @@
 <div id="login_wrapper">
 	<div id="login_main">
 		<!-- <div class="login_logo1"></div> -->
-		<div class="IE_alert">
+<!-- 		<div class="IE_alert">
 			<p>很遗憾，您的浏览器过于古老,请使用更新版本的浏览器</p>
 			<p class="suggestBrowser">我们建议您使用 <a href="http://www.google.cn/intl/zh-CN/chrome/browser/?installdataindex=chinabookmarkcontrol&brand=CHUN">谷歌浏览器</a>，或 <a href="http://windows.microsoft.com/zh-CN/internet-explorer/download-ie">更高版本的IE浏览器</a> </p>
 		</div>
-
+ -->
 		<div class="login_form">
 			<div class="login_form_header">
-				<p class="p_login login_active">登录</p>
-				<p class="p_register"><span class="img_register"></span>注册</p>
+			<!-- 	<p class="p_login login_active">登录</p> -->
+<!-- 				<p class="p_register"><span class="img_register"></span>注册</p>
 				<div class="clearB"></div>
-			</div>
+ -->			</div>
 			<form:form class="login_items" id="login_items" action="${ctx}/sys/login">
-				<div><label class="input_val">用户名：</label><input class="input" name="loginName"  autocomplete="off" /><img src="${ctxStatic}/login/style/images/login_mail.png" /> 
+				<div><label class="input_val">用户名：</label><input class="input" name="loginName"  autocomplete="off" /><%-- <img src="${ctxStatic}/login/style/images/login_mail.png" />  --%>
 				</div>
 				<div>
-				<label class="input_val">密&nbsp;&nbsp;&nbsp;码：</label><input class="input" name="password" type="password" id="login_password" autocomplete="off" /><img src="${ctxStatic}/login/style/images/login_password.png" /> 
+				<label class="input_val">密&nbsp;&nbsp;&nbsp;码：</label><input class="input" name="password" type="password" id="login_password" autocomplete="off" /><%-- <img src="${ctxStatic}/login/style/images/login_password.png" />  --%>
 				</div>
 				<div><label class="input_val">验证码: </label><input id="identifyCode" class="input" name="identifyCode" type="text" placeholder="验证码区分大小写" onchange="validate(this);"/>
 				<div >
@@ -92,14 +92,14 @@
                 size="8" ,maxlength="4" />  --> 
             	<img src="PictureCheckCode" id="CreateCheckCode" align="middle">  
             	<a href="" onclick="myReload()"> 看不清,换一个</a>  
-            <input type="submit" value="提交" />  
-				</div>	
-				</div><div class="login_msg">
+        <!--     <input type="submit" value="提交" />  
+		 -->		</div>	
+				<!-- </div><div class="login_msg">
 					<p class="login_error">
 						<span></span>
 					</p>
 				</div>
-
+ -->
 				<div class="clearB"></div>
 				<div class="remeber">
 					<span class="input_checkbox">
@@ -109,9 +109,10 @@
 					&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
 					<a id="forgetPassword" href="javascript:void(0)">忘记密码</a>
 				</div>
-				<a class="login_btn submit">登&nbsp;&nbsp;&nbsp;&nbsp;录</a>
+				<!-- <a class="login_btn submit">登&nbsp;&nbsp;&nbsp;&nbsp;录</a> -->
+				 <input type="submit" value="登录" />  
 			</form:form>
-			
+			<%-- 
 			<form:form class="register_items" id="register_items">
 				<label class="input_val"><input class="input" name="company" value="" autocomplete="off" /><span>组织名</span></label>
 				<label class="input_val"><input class="input" name="loginNme" value="" autocomplete="off" /><span>用户名</span></label>
@@ -128,7 +129,7 @@
 					</p>
 				</div>
 				<a class="login_btn submit">免&nbsp;&nbsp;费&nbsp;&nbsp;注&nbsp;&nbsp;册</a>
-			</form:form>
+			</form:form> --%><!-- 
 			<div class="login_coopeField">
 				<p class="coopeLogin_title" type="OPEN">使用其他账号登录</p>
 				<div class="coopeLogin_mainFiild">
@@ -136,7 +137,7 @@
 					<a class="btn_coopeLogin coopeLogin_mingdao" href="#"><span class="span_coopeLogin">用QQ账户登录</span></a>
 					<a class="btn_coopeLogin coopeLogin_weibo" href="#"><span class="span_coopeLogin">用微博账号登录</span></a>
 				</div>
-			</div>
+			</div> -->
 		</div>
 
 		<p class="contactUs">联系我们：1719341849@qq.com</p>
@@ -144,7 +145,7 @@
 </div>
 
 <!-- 忘记密码 -->
-<div class="popwin_forgetPassword" style="display:none">
+<!-- <div class="popwin_forgetPassword" style="display:none">
 	<p class="popwin_title">
 		忘记密码
 	</p>
@@ -156,7 +157,7 @@
 		<a class="button btn_gray popwin_cancel" onclick="TINY.box.hide();">取消</a>
 	</div>
 </div>
-
+ -->
 <!-- 服务协议弹出窗 -->
 <!-- <div class="popwin" id="popwin_treaty" style="display:none">
 	<p class="popwin_title">
